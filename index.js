@@ -6,6 +6,8 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 
+
+/*
 document.addEventListener('keydown', function (event){
     if (event.key === "w") {
         console.log("w trykket")
@@ -30,4 +32,4 @@ document.addEventListener('keydown', function (event){
     }
 })
 
-
+*/
