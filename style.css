@@ -17,3 +17,9 @@ body{
     top: 200px;
     left: 200px;
 }
+
+#eple{
+    width: 25px;
+    height: 30px;
+    position: absolute;
+}

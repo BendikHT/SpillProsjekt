@@ -1,4 +1,5 @@
 const character = document.getElementById("karakter")
+const aple = document.getElementById("eple")
 
 let posX = 200
 let posY = 200
