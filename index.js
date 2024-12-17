@@ -1,35 +1,35 @@
-const character = document.getElementById("karakter")
+/*
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.height = window.innerHeight;*/
 
+const character = document.getElementById("karakter")
 
+let posX = 200
+let posY = 200
 
-/*
-document.addEventListener('keydown', function (event){
-    if (event.key === "w") {
-        console.log("w trykket")
+document.addEventListener('keydown', function (event) {
+    if (event.key === "w") { 
+        console.log("w trykket");
+        posY -= 10; 
+        character.style.top = posY + "px";
     }
-})
-
-document.addEventListener('keydown', function (event){
     if (event.key === "a") {
-        console.log("a trykket")
+        console.log("a trykket");
+        posX -= 10; 
+        character.style.left = posX + "px";
     }
-})
-
-document.addEventListener('keydown', function (event){
     if (event.key === "s") {
-        console.log("s trykket")
+        console.log("s trykket");
+        posY += 10; 
+        character.style.top = posY + "px";
     }
-})
-
-document.addEventListener('keydown', function (event){
     if (event.key === "d") {
-        console.log("d trykket")
+        console.log("d trykket");
+        posX += 10;
+        character.style.left = posX + "px";
     }
-})
+});
 
-*/
