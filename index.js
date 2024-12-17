@@ -32,16 +32,18 @@ document.addEventListener('keydown', function (event) {
 });
 
 function Oppdaterposisjon(){ 
-    if (posX > 0){
-        character.style.top = posY + "px";
-    }
-    else if (posX < 0){
-        posX = 0
-    }
-    if (posY > 0){
-        character.style.left = posX + "px";
-    }
+    const characterWidth = character.offsetWidth;
+    const characterHeight = character.offsetHeight;
 
+    const maxX = window.innerWidth - characterWidth;
+    const maxY = window.innerHeight - characterHeight;
 
-        
+    if (posX < 0) posX = 0;
+    if (posX > maxX) posX = maxX;
+
+    if (posY < 0) posY = 0;
+    if (posY > maxY) posY = maxY;
+
+    character.style.left = posX + "px";
+    character.style.top = posY + "px";
 }
