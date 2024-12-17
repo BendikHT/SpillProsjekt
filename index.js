@@ -11,25 +11,37 @@ let posX = 200
 let posY = 200
 
 document.addEventListener('keydown', function (event) {
-    if (event.key === "w") { 
+    if (event.key === "w" || event.key === "ArrowUp") { 
         console.log("w trykket");
-        posY -= 5; 
-        character.style.top = posY + "px";
+        posY -= 5;
     }
-    if (event.key === "a") {
+    if (event.key === "a" || event.key === "ArrowLeft") {
         console.log("a trykket");
         posX -= 5; 
-        character.style.left = posX + "px";
     }
-    if (event.key === "s") {
+    if (event.key === "s" || event.key === "ArrowDown") {
         console.log("s trykket");
         posY += 5; 
-        character.style.top = posY + "px";
     }
-    if (event.key === "d") {
+    if (event.key === "d" || event.key === "ArrowRight") {
         console.log("d trykket");
         posX += 5;
-        character.style.left = posX + "px";
     }
+    Oppdaterposisjon()
+
 });
 
+function Oppdaterposisjon(){ 
+    if (posX > 0){
+        character.style.top = posY + "px";
+    }
+    else if (posX < 0){
+        posX = 0
+    }
+    if (posY > 0){
+        character.style.left = posX + "px";
+    }
+
+
+        
+}
