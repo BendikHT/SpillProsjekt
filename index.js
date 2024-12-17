@@ -1,27 +1,20 @@
-/*
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;*/
-
 const character = document.getElementById("karakter")
 
 let posX = 200
 let posY = 200
 
 document.addEventListener('keydown', function (event) {
-    if (event.key === "w" || event.key === "ArrowUp") { 
+    if (event.key === "w" || event.key === "ArrowUp") {
         console.log("w trykket");
         posY -= 5;
     }
     if (event.key === "a" || event.key === "ArrowLeft") {
         console.log("a trykket");
-        posX -= 5; 
+        posX -= 5;
     }
     if (event.key === "s" || event.key === "ArrowDown") {
         console.log("s trykket");
-        posY += 5; 
+        posY += 5;
     }
     if (event.key === "d" || event.key === "ArrowRight") {
         console.log("d trykket");
@@ -31,7 +24,7 @@ document.addEventListener('keydown', function (event) {
 
 });
 
-function Oppdaterposisjon(){ 
+function Oppdaterposisjon() {
     const characterWidth = character.offsetWidth;
     const characterHeight = character.offsetHeight;
 
