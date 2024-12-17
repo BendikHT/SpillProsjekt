@@ -34,11 +34,8 @@ document.addEventListener('keydown', function (event) {
 });
 
 function Oppdaterposisjon() {
-    const characterWidth = character.offsetWidth;
-    const characterHeight = character.offsetHeight;
-
-    const maxX = window.innerWidth - characterWidth;
-    const maxY = window.innerHeight - characterHeight;
+    const maxX = window.innerWidth - 30;
+    const maxY = window.innerHeight - 45;
 
     if (posX < 0) posX = 0;
     if (posX > maxX) posX = maxX;
