@@ -4,6 +4,14 @@ const aple = document.getElementById("eple")
 let posX = 200
 let posY = 200
 
+let randomX = Math.floor(Math.random()*window.innerWidth)
+let randomY = Math.floor(Math.random()*window.innerHeight)
+
+aple.style.top = randomY + "px";
+aple.style.left = randomX + "px";
+
+
+
 document.addEventListener('keydown', function (event) {
     if (event.key === "w" || event.key === "ArrowUp") {
         console.log("w trykket");

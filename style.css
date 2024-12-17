@@ -22,4 +22,5 @@ body{
     width: 25px;
     height: 30px;
     position: absolute;
+    top: -100px;
 }
