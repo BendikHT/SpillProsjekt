@@ -24,18 +24,26 @@ document.addEventListener('keydown', function (event) {
     if (event.key === "w" || event.key === "ArrowUp") {
         console.log("w trykket");
         posY -= 5;
+        character.src = "bilder/karakter/opp.png"
+        character.style.width = "30px"
     }
     if (event.key === "a" || event.key === "ArrowLeft") {
         console.log("a trykket");
         posX -= 5;
+        character.src = "bilder/karakter/venstre.png"
+        character.style.width = "18px"
     }
     if (event.key === "s" || event.key === "ArrowDown") {
         console.log("s trykket");
         posY += 5;
+        character.src = "bilder/karakter/ned.png"
+        character.style.width = "30px"
     }
     if (event.key === "d" || event.key === "ArrowRight") {
         console.log("d trykket");
         posX += 5;
+        character.src = "bilder/karakter/hoyre.png"
+        character.style.width = "18px"
     }
     if (event.key === "e"){
         console.log("e er trykket")
