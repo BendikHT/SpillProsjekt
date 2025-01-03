@@ -5,16 +5,16 @@ let posX = 200
 let posY = 200
 let posXforskjell
 let posYforskjell
-const randomX = Math.floor(Math.random() * window.innerWidth)
-const randomY = Math.floor(Math.random() * window.innerHeight)
+let posXeple = Math.floor(Math.random() * window.innerWidth)
+let posYeple = Math.floor(Math.random() * window.innerHeight)
 
 
 
 function Posisjoneple() {
-    aple.style.top = randomY + "px";
-    aple.style.left = randomX + "px";
+    aple.style.top = posYeple + "px";
+    aple.style.left = posXeple + "px";
 
-    console.log(randomX, randomY)
+    console.log(posXeple, posYeple)
 }
 Posisjoneple()
 
@@ -49,6 +49,11 @@ document.addEventListener('keydown', function (event) {
         console.log("e er trykket")
         plukkOpp()
     }
+
+    if (event.key === "q"){
+        console.log("q er trykket")
+        plaser()
+    }
     Oppdaterposisjon()
 });
 
@@ -63,18 +68,31 @@ function Oppdaterposisjon() {
     if (posY > maxY) posY = maxY;
 
     character.style.left = posX + "px";
-    character.style.top = posY + "px";
-
-    
+    character.style.top = posY + "px"; 
 
 }
 
 function plukkOpp(){
-    posXforskjell = randomX - posX
-    posYforskjell = randomY - posY
-    console.log(posXforskjell, posYforskjell)
+    posXforskjell = Math.abs(posXeple - posX);
+    posYforskjell = Math.abs(posYeple - posY);
+    console.log(posXforskjell, posYforskjell);
 
-    if (posXforskjell > -35 && posXforskjell < 35){
-        eple.style.display = "none"
+    if (posXforskjell <= 35 && posYforskjell <= 35){
+        eple.style.display = "none";
+    }
+}
+
+
+function plaser(){
+    
+
+    
+    
+    if(eple.style.display === "none"){
+        eple.style.display = "block"
+        posXeple = posX
+        posYeple = posY
+        aple.style.top = posYeple + "px";
+        aple.style.left = posXeple + "px";
     }
 }
