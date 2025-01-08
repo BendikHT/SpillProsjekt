@@ -84,10 +84,6 @@ function plukkOpp(){
 
 
 function plaser(){
-    
-
-    
-    
     if(eple.style.display === "none"){
         eple.style.display = "block"
         posXeple = posX
