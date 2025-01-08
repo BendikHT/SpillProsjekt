@@ -19,6 +19,7 @@ body{
     top: 200px;
     left: 200px;
     z-index: 100;
+    background-color: aqua;
 }
 
 #eple{
@@ -26,6 +27,7 @@ body{
     height: 30px;
     position: absolute;
     top: -100px;
+    background-color: blue;
 }
 
 #pixel{

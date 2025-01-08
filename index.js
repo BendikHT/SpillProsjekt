@@ -77,7 +77,7 @@ function plukkOpp(){
     posYforskjell = Math.abs(posYeple - posY);
     console.log(posXforskjell, posYforskjell);
 
-    if (posXforskjell <= 35 && posYforskjell <= 35){
+    if (posXforskjell <= 20 && posYforskjell <= 30){
         eple.style.display = "none";
     }
 }
