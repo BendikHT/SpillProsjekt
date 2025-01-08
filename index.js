@@ -80,6 +80,7 @@ function plukkOpp(){
     if (posXforskjell <= 20 && posYforskjell <= 30){
         eple.style.display = "none";
     }
+    
 }
 
 
