@@ -73,7 +73,7 @@ function plukkOpp(){
     posYforskjell = Math.abs(posYeple - posY);
     console.log(posXforskjell, posYforskjell);
 
-    if (posXforskjell <= 20 && posYforskjell <= 30){
+    if (posXforskjell <= 20 && posYforskjell <= 30 && !(eple.style.display == "none")){
         eple.style.display = "none";
         console.log(eple.src)
         const bilde = document.createElement("img")
