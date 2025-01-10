@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1 id="pixel">Pixelgame</h1>
+    <h1 id="pixel" style="z-index:1001;">Pixelgame</h1 >
     <div id="toolbar">
         <div class="toolbox" id="toolbox1"></div>
         <div class="toolbox" id="toolbox2"></div>
@@ -22,13 +22,14 @@
     <img src="bilder/karakter/opp.png" id="karakter">
     <img src="bilder/apple.png" id="eple">
     <div id="start">
-        <button id="playbutton" onclick="start()">
-            <img src="bilder/startbutton.png" alt="">
+        <button id="startskjerm" onclick="start()">
+            <img src="bilder/startbutton.png" id="startbutton">
             <br>
             Play
         </button>
     </div>
 
+    <audio src="lyd/startsound.mp3" id="startlyd"></audio>
 
     <script src="index.js"></script>
 </body>

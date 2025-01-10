@@ -80,17 +80,54 @@ body{
     
 }
 
-#start img{
+#startbutton{
     height: 60vh;
     filter: drop-shadow(0px 0px 15px black);
-
 }
 
-#playbutton{
+#startskjerm{
     font-family:"Jersey 15";
     font-size: 80px;
     font-weight: 600;
     background-color: transparent;
     border: none;
 }
+
+.spillanimasjon{
+    animation: startspill 3.3s;
+}
+.spillanimasjonbutton{
+    animation: startspillbutton 3.3s;
+}
+
+@keyframes startspill {
+    70% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
+
+@keyframes startspillbutton {
+    0% {
+    }
+
+    10%{
+        transform: scale(1.2);
+    }
+    30%{
+        transform: scale(1);
+    }
+
+    70% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+  }
 
