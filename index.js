@@ -22,7 +22,7 @@ Posisjoneple()
 
 
 
-document.addEventListener('keydown', event =>  {
+document.addEventListener('keydown', event => {
     if (event.key === "w" || event.key === "ArrowUp") {
         posY -= 5;
         character.src = "bilder/karakter/opp.png"
@@ -43,11 +43,11 @@ document.addEventListener('keydown', event =>  {
         character.src = "bilder/karakter/hoyre.png"
         character.style.width = "18px"
     }
-    if (event.key === "e"){
+    if (event.key === "e") {
         plukkOpp()
     }
 
-    if (event.key === "q"){
+    if (event.key === "q") {
         plaser()
     }
     Oppdaterposisjon()
@@ -64,16 +64,16 @@ function Oppdaterposisjon() {
     if (posY > maxY) posY = maxY;
 
     character.style.left = posX + "px";
-    character.style.top = posY + "px"; 
+    character.style.top = posY + "px";
 
 }
 
-function plukkOpp(){
+function plukkOpp() {
     posXforskjell = Math.abs(posXeple - posX);
     posYforskjell = Math.abs(posYeple - posY);
     console.log(posXforskjell, posYforskjell);
 
-    if (posXforskjell <= 20 && posYforskjell <= 30 && !(eple.style.display == "none")){
+    if (posXforskjell <= 20 && posYforskjell <= 30 && !(eple.style.display == "none")) {
         eple.style.display = "none";
         console.log(eple.src)
         const bilde = document.createElement("img")
@@ -83,8 +83,8 @@ function plukkOpp(){
 }
 
 
-function plaser(){
-    if(eple.style.display === "none"){
+function plaser() {
+    if (eple.style.display === "none") {
         eple.style.display = "block"
         posXeple = posX
         posYeple = posY
@@ -94,3 +94,19 @@ function plaser(){
         toolbox1.removeChild(toolbox1.firstElementChild)
     }
 }
+
+function musikk() {
+    const musicTracks = [
+        'lyd/bakgrunnmusikk/music1.mp3',
+        'lyd/bakgrunnmusikk/music2.mp3',
+        'lyd/bakgrunnmusikk/music3.mp3'
+    ];
+
+    const audioElement = new Audio();
+    audioElement.src = musicTracks[Math.floor(Math.random() * musicTracks.length)];
+    audioElement.loop = true;
+    audioElement.play();
+}
+
+musikk()
+

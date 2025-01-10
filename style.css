@@ -20,7 +20,6 @@ body{
     top: 200px;
     left: 200px;
     z-index: 100;
-    /*filter: drop-shadow(0px 45px 1px black);*/
 }
 
 #eple{
@@ -68,4 +67,30 @@ body{
     justify-content: center;
 }
 
+#start{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(106, 155, 112);
+    flex-direction: column;
+    position: relative;
+    z-index: 1000;
+    
+}
+
+#start img{
+    height: 60vh;
+    filter: drop-shadow(0px 0px 15px black);
+
+}
+
+#playbutton{
+    font-family:"Jersey 15";
+    font-size: 80px;
+    font-weight: 600;
+    background-color: transparent;
+    border: none;
+}
 
