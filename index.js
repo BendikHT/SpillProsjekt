@@ -11,6 +11,12 @@ let posXeple = Math.floor(Math.random() * window.innerWidth)
 let posYeple = Math.floor(Math.random() * window.innerHeight)
 
 
+function start(){
+    const startside = document.getElementById("start");
+    startside.style.display = "none"
+    startside.style.zIndex = "0";
+    musikk()
+}
 
 function Posisjoneple() {
     aple.style.top = posYeple + "px";
@@ -108,5 +114,4 @@ function musikk() {
     audioElement.play();
 }
 
-musikk()
 
