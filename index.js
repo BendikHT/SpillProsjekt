@@ -16,6 +16,7 @@
         const startside = document.getElementById("start");
         const startbutton = document.getElementById("startbutton")
         startlyd.play()
+        startlyd.volume = 0; //litt usikker på om jeg skal ha startmusikk
 
         setTimeout( function() {
             startside.style.display = "none";
@@ -111,16 +112,17 @@
     }
 
     function musikk() {
-        const musicTracks = [
+        const spilleliste = [
             'lyd/bakgrunnmusikk/music1.mp3',
             'lyd/bakgrunnmusikk/music2.mp3',
             'lyd/bakgrunnmusikk/music3.mp3'
         ];
 
-        const audioElement = new Audio();
-        audioElement.src = musicTracks[Math.floor(Math.random() * musicTracks.length)];
-        audioElement.loop = true;
-        audioElement.play();
+        const audio = new Audio();
+        audio.src = spilleliste[Math.floor(Math.random() * spilleliste.length)];
+        audio.loop = true;
+        audio.play();
+        audio.volume = 0; //orker ikke musikk mens jeg jobber. verdi skal være 0.2
     }
 
 
