@@ -10,6 +10,8 @@ let posYforskjell
 let posXeple = Math.floor(Math.random() * window.innerWidth)
 let posYeple = Math.floor(Math.random() * window.innerHeight)
 const startlyd = document.getElementById("startlyd")
+const bilde = document.createElement("img")
+
 
 
 function start() {
@@ -92,7 +94,6 @@ function plukkOpp() {
     if (posXforskjell <= 20 && posYforskjell <= 30 && !(eple.style.display == "none")) {
         eple.style.display = "none";
         console.log(eple.src)
-        const bilde = document.createElement("img")
         bilde.src = eple.src
         toolbox1.appendChild(bilde)
     }
@@ -122,9 +123,12 @@ function musikk() {
     audio.src = spilleliste[Math.floor(Math.random() * spilleliste.length)];
     audio.loop = true;
     audio.play();
-    audio.volume = 0; //orker ikke musikk mens jeg jobber. verdi skal være 0.2
+    audio.volume = 0.2; //orker ikke musikk mens jeg jobber. verdi skal være 0.2
 }
 
-function spawn(){
-    
+function spawn() {
+    bilde.src = eple.src
+    document.body.appendChild(bilde)
+    bilde.style.width = "25px";
+
 }
