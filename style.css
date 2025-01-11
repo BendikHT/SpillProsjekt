@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Quicksand:wght@300..700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100vh;
     width: 100%;
     overflow: hidden;
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/77/Pixel_art_grass_image.png);
 }
 
-#karakter{
+#karakter {
     width: 30px;
     height: 45px;
     position: absolute;
@@ -22,16 +22,16 @@ body{
     z-index: 100;
 }
 
-#eple{
+#eple {
     width: 25px;
     height: 30px;
     position: absolute;
-    top:-100px;
+    top: -100px;
     filter: drop-shadow(0px 15px 12px black);
 }
 
-#pixel{
-    font-family:"Jersey 15";
+#pixel {
+    font-family: "Jersey 15";
     font-size: 80px;
     font-weight: 600;
     position: absolute;
@@ -39,9 +39,10 @@ body{
     line-height: 0.6;
     text-shadow: 0px 0px 6px black;
     color: rgb(109, 68, 28);
+    z-index: 1000;
 }
 
-.toolbox{
+.toolbox {
     width: 48px;
     height: 48px;
     background-image: url(bilder/toolbox.png);
@@ -52,12 +53,12 @@ body{
     align-items: center;
 }
 
-.toolbox img{
+.toolbox img {
     width: 30px;
     height: 36px;
 }
 
-#toolbar{
+#toolbar {
     position: absolute;
     z-index: 101;
     bottom: 10px;
@@ -67,36 +68,110 @@ body{
     justify-content: center;
 }
 
-#start{
+/*
+ button henta fra https://uiverse.io/cssbuttons-io/plastic-mule-29
+*/
+#spawnButton {
+    width: 96px;
+    height: 48px;
+    border: none;
+    background-color: #008542;
+    color: #fff;
+    text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 0;
+    z-index: 1;
+    user-select: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    white-space: unset;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: 900;
+    transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+
+}
+
+#spawnButton:before {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+    z-index: -1;
+    background-color: #008542 !important;
+    box-shadow: 0 -4px rgb(21 108 0 / 50%) inset,
+        0 4px rgb(100 253 31 / 99%) inset, -4px 0 rgb(100 253 31 / 50%) inset,
+        4px 0 rgb(21 108 0 / 50%) inset;
+}
+
+#spawnButton:after {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+
+#spawnButton:hover:before {
+    box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+        -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+
+#spawnButton:hover:after {
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+}
+
+#spawnButton:active {
+    transform: translateY(4px);
+}
+
+#spawnButton:active:after {
+    box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+}
+
+#start {
     height: 100vh;
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     background-color: rgb(106, 155, 112);
     flex-direction: column;
     position: relative;
     z-index: 1000;
-    
 }
 
-#startbutton{
+#startbutton {
     height: 60vh;
     filter: drop-shadow(0px 0px 15px black);
 }
 
-#startskjerm{
-    font-family:"Jersey 15";
+#startskjerm {
+    font-family: "Jersey 15";
     font-size: 80px;
     font-weight: 600;
     background-color: transparent;
     border: none;
 }
 
-.spillanimasjon{
+.spillanimasjon {
     animation: startspill 3.3s;
 }
-.spillanimasjonbutton{
+
+.spillanimasjonbutton {
     animation: startspillbutton 3.3s;
 }
 
@@ -104,30 +179,32 @@ body{
     70% {
         opacity: 1;
     }
+
     80% {
         opacity: 0;
     }
+
     100% {
         opacity: 0;
     }
-  }
+}
 
 @keyframes startspillbutton {
-    0% {
-    }
+    0% {}
 
-    10%{
+    10% {
         transform: scale(1.2);
     }
-    30%{
+
+    30% {
         transform: scale(1);
     }
 
     70% {
         transform: rotate(180deg);
     }
+
     100% {
         transform: rotate(180deg);
     }
-  }
-
+}
