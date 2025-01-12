@@ -19,6 +19,7 @@ function start() {
     startlyd.play()
     startlyd.volume = 0; //litt usikker på om jeg skal ha startmusikk
     karakter.style.opacity = "0"
+    document.getElementById("toolbox1").classList.add("markertToolbox")
 
     setTimeout(function () {
         startside.style.display = "none";
@@ -74,6 +75,9 @@ document.addEventListener('keydown', event => {
 
     if (event.key === "q") {
         plaser()
+    }
+    if (event.key >= "1" && event.key <= "6") {
+        document.getElementById(`toolbox${event.key}`).classList.add("markertToolbox")
     }
     Oppdaterposisjon()
 });
