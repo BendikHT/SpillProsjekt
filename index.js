@@ -79,6 +79,7 @@ document.addEventListener('keydown', event => {
     if (event.key >= "1" && event.key <= "6") {
         document.getElementById(`toolbox${event.key}`).classList.add("markertToolbox")
     }
+    
     Oppdaterposisjon()
 });
 
