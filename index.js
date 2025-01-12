@@ -1,16 +1,16 @@
 const character = document.getElementById("karakter")
 const aple = document.getElementById("eple")
 const toolbox1 = document.getElementById("toolbox1")
-
-
+const startlyd = document.getElementById("startlyd")
+const bilde = document.createElement("img")
+const skyggestripe = document.getElementById("skyggestripe")
 let posX = 200
 let posY = 200
 let posXforskjell
 let posYforskjell
 let posXeple = Math.floor(Math.random() * window.innerWidth)
 let posYeple = Math.floor(Math.random() * window.innerHeight)
-const startlyd = document.getElementById("startlyd")
-const bilde = document.createElement("img")
+
 
 
 function start() {
@@ -18,12 +18,20 @@ function start() {
     const startbutton = document.getElementById("startbutton")
     startlyd.play()
     startlyd.volume = 0; //litt usikker på om jeg skal ha startmusikk
+    karakter.style.opacity = "0"
 
     setTimeout(function () {
         startside.style.display = "none";
         startside.style.zIndex = "0";
         musikk();
+        karakter.classList.add("kakarteranimasjon")
+        skyggestripe.classList.add("stripeanimasjon")
     }, 3100);
+
+    setTimeout(function () {
+        skyggestripe.style.display = "none"
+        karakter.style.opacity = "1"
+    }, 5100)
 
     startside.classList.add("spillanimasjon");
     startbutton.classList.add("spillanimasjonbutton")

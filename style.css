@@ -20,7 +20,63 @@ body {
     top: 200px;
     left: 200px;
     z-index: 100;
-    transform:translate(-15px);
+    transform: translate(-15px);
+}
+
+#skyggestripe {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 130px;
+    left: 105px;
+    background-image: url(bilder/portal.png);
+    background-size: cover;
+    z-index: 10;
+    transform: scale(1) ;
+    border-radius: 50%;
+}
+
+.kakarteranimasjon {
+    animation: karakter 2s;
+}
+
+.stripeanimasjon {
+    animation: stripe 2s;
+}
+
+@keyframes karakter {
+    0%{
+        transform: scale(0) translate(-15px);
+        opacity: 0;
+        left: 220px;
+    } 
+
+    50% {
+        transform: scale(1) translate(-15px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1) translate(-15px);
+        opacity: 1;
+    }
+}
+
+@keyframes stripe {
+    0% {
+        transform: scale(1) ;
+        
+    }
+
+    50% {
+        transform: scale(1.2);
+        
+    }
+
+    100% {
+        transform: scale(0);
+        
+    }
 }
 
 #eple {
@@ -30,7 +86,7 @@ body {
     filter: drop-shadow(0px 15px 12px black);
 }
 
-#pixel{
+#pixel {
     font-family: "Jersey 15";
     font-size: 80px;
     font-weight: 600;
@@ -144,7 +200,7 @@ body {
 #start {
     height: 100vh;
     width: 100%;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(106, 155, 112);
@@ -190,8 +246,6 @@ body {
 }
 
 @keyframes startspillbutton {
-    0% {}
-
     10% {
         transform: scale(1.2);
     }
