@@ -13,7 +13,6 @@ const startlyd = document.getElementById("startlyd")
 const bilde = document.createElement("img")
 
 
-
 function start() {
     const startside = document.getElementById("start");
     const startbutton = document.getElementById("startbutton")
@@ -33,12 +32,8 @@ function start() {
 function Posisjoneple() {
     aple.style.top = posYeple + "px";
     aple.style.left = posXeple + "px";
-
-    console.log(posXeple, posYeple)
 }
 Posisjoneple()
-
-
 
 document.addEventListener('keydown', event => {
     if (event.key === "w" || event.key === "ArrowUp") {
@@ -93,7 +88,6 @@ function Oppdaterposisjon() {
 function plukkOpp() {
     posXforskjell = Math.abs(posXeple - posX);
     posYforskjell = Math.abs(posYeple - posY);
-    console.log(posXforskjell, posYforskjell);
 
     if (posXforskjell <= 20 && posYforskjell <= 30 && !(eple.style.display == "none")) {
         eple.style.display = "none";
@@ -134,5 +128,4 @@ function spawn() {
     bilde.src = eple.src
     document.body.appendChild(bilde)
     bilde.style.width = "25px";
-
 }

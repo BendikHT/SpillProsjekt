@@ -30,7 +30,7 @@ body {
     filter: drop-shadow(0px 15px 12px black);
 }
 
-#pixel {
+#pixel{
     font-family: "Jersey 15";
     font-size: 80px;
     font-weight: 600;
@@ -55,7 +55,6 @@ body {
 
 .toolbox img {
     width: 30px;
-    height: 36px;
 }
 
 #toolbar {
