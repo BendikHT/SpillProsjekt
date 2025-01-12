@@ -1,5 +1,5 @@
 # SpillProsjekt
- Spill prosjekt 2
+ Spill prosjekt 
 
 aner ikke helt hva dette skal bli men forløpig plan er:
 - karkater som kan bevege seg fritt
