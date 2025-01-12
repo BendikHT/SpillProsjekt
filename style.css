@@ -23,7 +23,7 @@ body {
     transform: translate(-15px);
 }
 
-#skyggestripe {
+#portal{
     height: 200px;
     width: 200px;
     position: absolute;
@@ -32,20 +32,20 @@ body {
     background-image: url(bilder/portal.png);
     background-size: cover;
     z-index: 10;
-    transform: scale(1) ;
+    transform: scale(0) ;
     border-radius: 50%;
 }
 
 .kakarteranimasjon {
-    animation: karakter 2s;
+    animation: karakter 3s;
 }
 
-.stripeanimasjon {
-    animation: stripe 2s;
+.portalanimasjon {
+    animation: portal 3s;
 }
 
 @keyframes karakter {
-    0%{
+    30%{
         transform: scale(0) translate(-15px);
         opacity: 0;
         left: 220px;
@@ -62,9 +62,9 @@ body {
     }
 }
 
-@keyframes stripe {
+@keyframes portal {
     0% {
-        transform: scale(1) ;
+        transform: scale(0) ;
         
     }
 

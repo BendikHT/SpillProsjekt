@@ -3,7 +3,7 @@ const aple = document.getElementById("eple")
 const toolbox1 = document.getElementById("toolbox1")
 const startlyd = document.getElementById("startlyd")
 const bilde = document.createElement("img")
-const skyggestripe = document.getElementById("skyggestripe")
+const portal = document.getElementById("portal")
 let posX = 200
 let posY = 200
 let posXforskjell
@@ -25,13 +25,13 @@ function start() {
         startside.style.zIndex = "0";
         musikk();
         karakter.classList.add("kakarteranimasjon")
-        skyggestripe.classList.add("stripeanimasjon")
+        portal.classList.add("portalanimasjon")
     }, 3100);
 
     setTimeout(function () {
-        skyggestripe.style.display = "none"
+        portal.style.display = "none"
         karakter.style.opacity = "1"
-    }, 5100)
+    }, 6100)
 
     startside.classList.add("spillanimasjon");
     startbutton.classList.add("spillanimasjonbutton")
