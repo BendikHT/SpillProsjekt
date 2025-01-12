@@ -45,21 +45,25 @@ document.addEventListener('keydown', event => {
         posY -= 5;
         character.src = "bilder/karakter/opp.png"
         character.style.width = "30px"
+        character.style.transform = "translate(-15px)"
     }
     if (event.key === "a" || event.key === "ArrowLeft") {
         posX -= 5;
         character.src = "bilder/karakter/venstre.png"
         character.style.width = "18px"
+        character.style.transform = "translate(-9px)"
     }
     if (event.key === "s" || event.key === "ArrowDown") {
         posY += 5;
         character.src = "bilder/karakter/ned.png"
         character.style.width = "30px"
+        character.style.transform = "translate(-15px)"
     }
     if (event.key === "d" || event.key === "ArrowRight") {
         posX += 5;
         character.src = "bilder/karakter/hoyre.png"
         character.style.width = "18px"
+        character.style.transform = "translate(-9px)"
     }
     if (event.key === "e") {
         plukkOpp()
@@ -123,7 +127,7 @@ function musikk() {
     audio.src = spilleliste[Math.floor(Math.random() * spilleliste.length)];
     audio.loop = true;
     audio.play();
-    audio.volume = 0.2; //orker ikke musikk mens jeg jobber. verdi skal være 0.2
+    audio.volume = 0; //orker ikke musikk mens jeg jobber. verdi skal være 0.2
 }
 
 function spawn() {
