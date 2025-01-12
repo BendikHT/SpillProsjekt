@@ -134,7 +134,7 @@ function musikk() {
     audio.src = spilleliste[Math.floor(Math.random() * spilleliste.length)];
     audio.loop = true;
     audio.play();
-    audio.volume = 0; //orker ikke musikk mens jeg jobber. verdi skal være 0.2
+    audio.volume = 0.2; //orker ikke musikk mens jeg jobber. verdi skal være 0.2
 }
 
 function spawn() {
