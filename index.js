@@ -77,6 +77,12 @@ document.addEventListener('keydown', event => {
         plaser()
     }
     if (event.key >= "1" && event.key <= "6") {
+        document.getElementById("toolbox1").classList.remove("markertToolbox")
+        document.getElementById("toolbox2").classList.remove("markertToolbox")
+        document.getElementById("toolbox3").classList.remove("markertToolbox")
+        document.getElementById("toolbox4").classList.remove("markertToolbox")
+        document.getElementById("toolbox5").classList.remove("markertToolbox")
+        document.getElementById("toolbox6").classList.remove("markertToolbox")
         document.getElementById(`toolbox${event.key}`).classList.add("markertToolbox")
     }
     
