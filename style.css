@@ -208,7 +208,7 @@ body {
 #start {
     height: 100vh;
     width: 100%;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(106, 155, 112);

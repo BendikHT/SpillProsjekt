@@ -79,9 +79,9 @@ document.addEventListener('keydown', event => {
     }
     if (event.key >= "1" && event.key <= "6") {
         for (let i = 1; i <= 6; i++) {
-            document.getElementById(`toolbox${i}`).classList.remove("markertToolbox");
+            document.getElementById(`toolbox${i}`).classList.remove("markertToolbox")   ;
         }
-        document.getElementById(`toolbox${event.key}`).classList.add("markertToolbox")
+        document.getElementById(`toolbox${event.key}`).classList.add("markertToolbox");
         toolboxdiv = document.getElementById(`toolbox${event.key}`);
         console.log(toolboxdiv)
         toolboxmarkert = `toolbox${event.key}`
@@ -113,7 +113,7 @@ function plukkOpp() {
         eple.style.display = "none";
         console.log(eple.src)
         bilde.src = eple.src
-        markerttoolbox.appendChild(bilde)
+        toolboxdiv.appendChild(bilde)
     }
 }
 
@@ -126,7 +126,7 @@ function plaser() {
         aple.style.top = posYeple + "px";
         aple.style.left = posXeple + "px";
 
-        markerttoolbox.removeChild(markerttoolbox.firstElementChild)
+        toolboxdiv.removeChild(toolboxdiv.firstElementChild)
     }
 }
 
