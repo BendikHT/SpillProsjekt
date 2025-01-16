@@ -1,6 +1,5 @@
 const character = document.getElementById("karakter")
 const aple = document.getElementById("eple")
-const toolbox1 = document.getElementById("toolbox1")
 const startlyd = document.getElementById("startlyd")
 const bilde = document.createElement("img")
 const portal = document.getElementById("portal")
@@ -10,6 +9,8 @@ let posXforskjell
 let posYforskjell
 let posXeple = Math.floor(Math.random() * window.innerWidth)
 let posYeple = Math.floor(Math.random() * window.innerHeight)
+let toolboxdiv;
+let toolboxmarkert;
 
 
 
@@ -44,7 +45,7 @@ function Posisjoneple() {
 }
 Posisjoneple()
 
-document.addEventListener('keydown', event => {
+document.addEventListener('keydown', event => { 
     if (event.key === "w" || event.key === "ArrowUp") {
         posY -= 5;
         character.src = "bilder/karakter/opp.png"
@@ -77,13 +78,13 @@ document.addEventListener('keydown', event => {
         plaser()
     }
     if (event.key >= "1" && event.key <= "6") {
-        document.getElementById("toolbox1").classList.remove("markertToolbox")
-        document.getElementById("toolbox2").classList.remove("markertToolbox")
-        document.getElementById("toolbox3").classList.remove("markertToolbox")
-        document.getElementById("toolbox4").classList.remove("markertToolbox")
-        document.getElementById("toolbox5").classList.remove("markertToolbox")
-        document.getElementById("toolbox6").classList.remove("markertToolbox")
+        for (let i = 1; i <= 6; i++) {
+            document.getElementById(`toolbox${i}`).classList.remove("markertToolbox");
+        }
         document.getElementById(`toolbox${event.key}`).classList.add("markertToolbox")
+        toolboxdiv = document.getElementById(`toolbox${event.key}`);
+        console.log(toolboxdiv)
+        toolboxmarkert = `toolbox${event.key}`
     }
     
     Oppdaterposisjon()
@@ -112,7 +113,7 @@ function plukkOpp() {
         eple.style.display = "none";
         console.log(eple.src)
         bilde.src = eple.src
-        toolbox1.appendChild(bilde)
+        markerttoolbox.appendChild(bilde)
     }
 }
 
@@ -125,7 +126,7 @@ function plaser() {
         aple.style.top = posYeple + "px";
         aple.style.left = posXeple + "px";
 
-        toolbox1.removeChild(toolbox1.firstElementChild)
+        markerttoolbox.removeChild(markerttoolbox.firstElementChild)
     }
 }
 
