@@ -12,15 +12,15 @@ let posYeple = Math.floor(Math.random() * window.innerHeight)
 let toolboxdiv;
 let toolboxmarkert;
 
-
+document.getElementById("toolbox1").classList.add("markertToolbox")
 
 function start() {
     const startside = document.getElementById("start");
     const startbutton = document.getElementById("startbutton")
+    document.getElementById("startskjerm").disabled = true; 
     startlyd.play()
     startlyd.volume = 0; //litt usikker på om jeg skal ha startmusikk
     karakter.style.opacity = "0"
-    document.getElementById("toolbox1").classList.add("markertToolbox")
 
     setTimeout(function () {
         startside.style.display = "none";
@@ -143,11 +143,9 @@ function musikk() {
     audio.src = spilleliste[Math.floor(Math.random() * spilleliste.length)];
     audio.loop = true;
     audio.play();
-    audio.volume = 0; //orker ikke musikk mens jeg jobber. verdi skal være 0.2
+    audio.volume = 0.2; //orker ikke musikk mens jeg jobber. verdi skal være 0.2
 }
 
 function spawn() {
-    bilde.src = eple.src
-    document.body.appendChild(bilde)
-    bilde.style.width = "25px";
+    
 }
